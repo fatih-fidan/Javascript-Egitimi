@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calısma29</title>
+</head>
+<style>
+    #div1 {
+        height: 80px;
+        width: 100%;
+        background-color:yellow;
+    }
+    
+    #div2 {
+        height: 80px;
+        width: 100%;
+        background-color:red;
+    }
+
+    #div3 {
+        height: 80px;
+        width: 100%;
+        background-color:blue;
+    }
+    
+    #div4 {
+        height: 80px;
+        width: 100%;
+        background-color:green;
+    }
+    
+    p{
+        font-size: 35px;
+        color: chartreuse;
+    }
+
+
+</style>
+
+<body>
+
+    <div id="div1" class="class1" name="name1">JavaScript Öğreniyorum.</div>
+    <div id="div2" class="class2"></div>
+    <div id="div3" class="class3"></div>
+    <div id="div4" class="class4" name="name1"></div>
+   
+   <script>
+
+       var a = document.getElementById("div1").innerHTML;
+
+       document.getElementById("div3").innerHTML="<p>Javascript<p/>";
+       document.getElementById("div4").innerHTML=a;
+       document.getElementById("div2").innerHTML=a;
+
+       document.getElementById("div1").remove();
+
+
+    </script>
+    
+</body>
+</html>

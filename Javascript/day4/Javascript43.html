@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calısma42</title>
+</head>
+
+
+<style>
+
+
+
+
+
+
+
+
+</style>
+<body id="arka">
+
+    <img src="foto1.jpg" id="img" width="1300" height="600">
+
+    
+
+
+
+
+    <script>
+
+        var text;
+
+        function resimsec () {
+
+            var a = ["Javascript/foto1.jpg","foto2.jpg","foto4.jpg","foto5.jpg","foto6.jpg"];
+            text = "";
+            
+
+                var random = Math.round(Math.random() * 5);
+                text = a[random];
+
+
+            
+        }
+
+        setInterval(function() {
+            
+            resimsec();
+
+            document.getElementById("img").src=text;
+
+
+
+
+
+        }, 2000)
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

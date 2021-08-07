@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 50</title>
+</head>
+
+<style>
+
+    #div1 {
+        width: 50%;
+        height: 300px;
+        position: relative;
+        top: 100px;
+        left: 25%;
+        border: 2px solid green;
+        box-shadow: green 0px 5px 3px;
+    }
+    #sonuc {
+        width: 50%;
+        height: 100px;
+        position: relative;
+        top: 130px;
+        left: 25%;
+        color: forestgreen;
+        font-size: 64px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #player1 {
+        width: 210px;
+        height: 200px;
+        float: left;
+        border-bottom: 2px solid black;
+        background-repeat:round;
+        background-position: center;
+        background-image: url(player1.png) ;
+        
+      
+    }
+
+    #player2 {
+        width: 210px;
+        height: 200px;
+        float: right;
+        border-bottom: 2px solid black;
+        background-repeat: round;
+        background-position: center;
+        background-image: url(player2.png);
+    }
+    #skor {
+        width: 275px;
+        height: 200px;
+        margin-left: 100px;
+        float: left;
+        text-align: center;
+        font-size: 32px;
+        color: black;
+
+    }
+    #skor1 {
+        width: 75px;
+        height: 75px;
+        background-color: white;
+        margin-top: 80px;
+        margin-left: 40px;
+        float: left;
+        border: 1px solid black;
+        box-shadow: gray 0px 5px 3px;
+        text-align: center;
+        font-size: 64px;
+
+
+    }
+    #skor2 {
+        width: 75px;
+        height: 75px;
+        background-color: white;
+        margin-top: 80px;
+        margin-left: 20px;
+        float: right;
+        border: 1px solid black;
+        box-shadow: gray 0px 5px 3px;
+        text-align: center;
+        font-size: 64px;
+    }
+    .play {
+        color: black;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 200px;
+        text-shadow: 2px 2px 1px gray;
+    }
+    #btn { 
+        position: relative;
+        width: 200px;
+        height: 40px;
+        margin-top: 30px;
+        margin-left: 160px;
+        font-size:20px;
+       
+
+    }
+
+    
+
+
+
+
+</style>
+<body>
+
+    <div id="div1">
+        <div id="player1">
+            <p id="p1" class="play">PLAYER 1</p>
+        </div>
+        <div id="skor">
+            Skor
+            <div id="skor1">
+                0
+            </div>
+            <div id="skor2">
+                0
+            </div>
+
+        </div>
+        <div id="player2">
+            <p id="p2" class="play">PLAYER 2</p>
+        </div>
+        <button id="btn">Oyna</button>
+    </div>
+
+    <div id="sonuc"></div>
+
+
+
+    <script>
+
+        var secenekler = ["url(player1.png)","url(player2.png)"];
+
+        function uret() {
+            var random = Math.round(Math.random() * 2);
+            return random;
+
+        }
+
+        var a, b ;
+        function yerlestir() {
+            a = secenekler[uret()];
+            b = secenekler[uret()];
+
+
+            document.getElementById("player1").style.backgroundImage = a;
+            document.getElementById("player2").style.backgroundImage = b;
+        }
+
+        function sonucyaz () { 
+            var x =Number(document.getElementById("skor1").innerHTML);
+            var y =Number(document.getElementById("skor2").innerHTML);
+
+            if(a == "url(player1.png)" && b == "url(player2.jpg)") {
+                document.getElementById("skor1").innerHTML = x + 1;
+
+            }
+            else if (a == "url(player1.png)" && b == "url (player2.png)") {
+                document.getElementById("skor2").innerHTML = y + 1;
+            }
+            else if (a == "url(player2.png)" && b == "url (player1.png)") {
+                document.getElementById("skor2").innerHTML = y + 1;
+            }
+            
+        }
+
+        function kontrolet () {
+            var x =Number(document.getElementById("skor1").innerHTML);
+            var y =Number(document.getElementById("skor2").innerHTML);
+
+            if (x == 3 ) {
+                document.getElementById("sonuc").innerHTML="PLAYER 1 KAZANDI"
+            }
+            if (y == 3 ) {
+                document.getElementById("sonuc").innerHTML="PLAYER 2 KAZANDI"
+            }
+        }
+
+
+        document.getElementById("btn").addEventListener("click",function() {
+            uret();
+            yerlestir();
+            sonucyaz();
+            kontrolet();
+        })
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

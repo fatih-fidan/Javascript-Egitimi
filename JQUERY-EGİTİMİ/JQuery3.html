@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calısma 3</title>
+    <script src="jquery-3.6.0.min.js"></script>
+
+</head>
+
+<style>
+    table {
+        border: 1px solid black;
+
+    }
+    tr{
+        text-align: center;
+
+    }
+
+    td,th {
+        border: 1px solid black;
+        padding: 3px;
+    }
+
+
+
+
+</style>
+<br>
+    <div>
+
+    <p id="p1" class="c1"> Paragraf 1 ID : p1 Class : c1</p>
+    <p id="p2" class="c2"> Paragraf 2 ID : p2 Class : c2</p>
+    <p id="p3" class="c3"> Paragraf 3 ID : p3 Class : c3</p>
+    <p id="p4" class="c4"> Paragraf 4 ID : p4 Class : c4</p>
+
+</div>
+
+<table cellspacing="0">
+
+    <thead>
+        <tr>
+            <th>Ad/Soyad</th>
+            <th>Yaş</th>
+            <th>Meslek </th>    
+        </tr>
+        <tr>
+            <th>Doruk Akgül</th>
+            <th>24</th>
+            <th>Endüstri Mühendisi </th>    
+        </tr>
+        <tr>
+            <th>Kılıç Kalemder</th>
+            <th>26</th>
+            <th>Kaptan </th>    
+        </tr>
+        <tr>
+            <th>İrem Şişman</th>
+            <th>22</th>
+            <th>Çevirmen </th>    
+        </tr>
+        <tr>
+            <th>Barış Akgül</th>
+            <th>25</th>
+            <th>Mühendis</th>    
+        </tr>
+    </thead>
+
+
+</table>
+
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+    <li>JQuery</li>
+</ul>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+    <li>JQuery</li>
+</ul>
+
+<a href="JQuery2.html" target="_blank">JQuery3</a>
+<br></br>
+<button id="btn">Tıkla</button>
+
+
+
+
+
+    <script>
+
+        $(function() {
+            $("#btn").click(function() {
+
+                $("*").css("color","red");
+            });
+
+        });
+
+
+
+    </script>
+    
+</body>
+</html>

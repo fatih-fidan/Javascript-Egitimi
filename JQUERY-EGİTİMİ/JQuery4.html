@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calısma 4</title>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+<style>
+#div1{
+    width: 100%;
+    height: 400px;
+    background-color: yellow;
+
+}
+#div2 {
+    width: 30%;
+    height: 200px;
+    background-color: green;
+}
+</style>
+<body>
+
+
+    <div id="div1">
+        <div id="div2">
+
+        </div>
+
+
+    </div>
+
+    
+    <br />
+    <input id="txt" type="text">
+    <br></br>
+    <button id="btn">Tıkla</button>
+
+
+    <script>
+
+        $(function() {
+            $("#btn").dblclick(function () {
+                $("#div1").css("background-color","red");
+            });
+
+        });
+
+
+
+    </script>
+    
+</body>
+</html>
